@@ -62,9 +62,9 @@ The Arduino collects acceleration data to infer the tilt (theta) of the arm. By 
 
 ### Calculating Height
 
-The height is computed using: Vertical Height = PIVOT_HEIGHT - ARM_LENGTH * cos(theta)
+The height is computed using: Vertical Height = PIVOT_HEIGHT - ARM_LENGTH * sin(theta)
 
-- `theta` is given in radians.
+- `theta` is given in radians and represents the angle between horizon on hinge height and the arm.
 
 The software collects samples, calculates averages, amplitudes, and frequencies of wave motion automatically.
 
